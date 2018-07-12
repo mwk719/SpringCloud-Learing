@@ -1,17 +1,22 @@
 server:
   port: 7900
 spring:
+#jpa数据库
   jpa:
     generate-ddl: false
     show-sql: true
     hibernate:
       ddl-auto: none
+ #数据源
   datasource:
     platform: h2
+    #建库
     schema: classpath:schema.sql
+    #数据
     data: classpath:data.sql
   application:
     name: microservice-provider-user-client
+    #日志
 logging:
   level:
     root: INFO
@@ -25,6 +30,7 @@ eureka:
       enabled: true
     serviceUrl:
       defaultZone: http://mwk:mwk666@localhost:8761/eureka
+  #eureka注册名称
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}

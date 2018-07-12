@@ -1,5 +1,8 @@
 package com.mwk.controller;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -26,6 +29,7 @@ public class MovieController {
 
 	/**
 	 * 负载均衡
+	 * 
 	 * @return
 	 */
 	@GetMapping("/test")
@@ -39,6 +43,18 @@ public class MovieController {
 				+ serviceInstance2.getPort());
 
 		return "1";
+	}
+
+	@GetMapping("/list-all")
+	public List<User> listAll() {
+
+		User[] users = this.restTemplate.getForObject("http://microservice-provider-user-client/list-all", User[].class);
+		List<User> list = Arrays.asList(users);
+		for (User user : list) {
+			System.out.println(user.getId());
+		}
+
+		return list;
 	}
 
 }
