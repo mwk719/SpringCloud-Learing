@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: microservice-consumer-movie-ribbon
+server:
+  port: 8010
+  #日志
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.mwk: DEBUG
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://mwk:mwk666@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+#负载均衡ribbon配置
+microservice-provider-user-client:
+  ribbon:
+  #随机命中服务
+   NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+  #权重命中
+   #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
+   #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+   
+   
+   
