@@ -33,6 +33,7 @@ public class UserController {
 
 	@GetMapping("/simple/{id}")
 	public User findById(@PathVariable Long id) {
+		System.out.println("7900服务");
 		return this.userRepository.findOne(id);
 
 	}
