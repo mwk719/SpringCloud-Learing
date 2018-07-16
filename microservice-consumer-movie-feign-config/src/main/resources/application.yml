@@ -1,0 +1,17 @@
+spring:
+  application: 
+    name: microservice-consumer-movie-feign-config
+server:
+  port: 7901
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://mwk:mwk666@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+logging:
+  level:
+    com.mwk.feign: debug

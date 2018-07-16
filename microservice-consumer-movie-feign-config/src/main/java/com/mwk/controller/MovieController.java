@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mwk.entity.User;
 import com.mwk.feign.UserFeignClient;
 
+
 @RestController
 public class MovieController {
 
@@ -28,5 +29,4 @@ public class MovieController {
 		
 	}
 
-	
 }
