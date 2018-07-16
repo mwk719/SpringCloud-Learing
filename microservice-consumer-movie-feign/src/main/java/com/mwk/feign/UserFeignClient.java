@@ -11,6 +11,7 @@ import com.mwk.entity.User;
 @FeignClient("microservice-provider-user-client")
 public interface UserFeignClient {
 	
+	//支持负载均衡
 	@RequestMapping(value="/simple/{id}",method=RequestMethod.GET)
 	public User findById(@PathVariable("id") Long id);
 	

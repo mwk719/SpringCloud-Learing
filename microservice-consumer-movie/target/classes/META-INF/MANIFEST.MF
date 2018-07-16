@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: microservice-consumer-movie-ribbon-config
+Implementation-Title: microservice-consumer-movie
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: mwk
 Implementation-Vendor-Id: com.mwk

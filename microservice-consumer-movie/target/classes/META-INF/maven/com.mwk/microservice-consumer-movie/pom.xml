@@ -8,14 +8,13 @@
 		<artifactId>microservice-spring-cloud</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>microservice-consumer-movie-ribbon-config</artifactId>
-	<name>microservice-consumer-movie-ribbon-config</name>
-	<url>http://maven.apache.org</url>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-	<dependencies>
-		<dependency>
+  <artifactId>microservice-consumer-movie</artifactId>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -29,5 +28,5 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-	</dependencies>
+  </dependencies>
 </project>
