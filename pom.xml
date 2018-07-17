@@ -21,6 +21,7 @@
 		<module>microservice-discovery-eureka</module>
 		<module>microservice-discovery-eureka-high</module>
 		<module>microservice-consumer-movie-ribbon-list</module>
+		<module>microservice-consumer-movie-ribbon-hystrix</module>
 	</modules>
 
 	<properties>

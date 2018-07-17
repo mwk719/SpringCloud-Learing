@@ -38,5 +38,5 @@ eureka:
       zone: ABC      # eureka可以理解的元数据
       lilizhou: BBC  # 不会影响客户端行为
     lease-renewal-interval-in-seconds: 5
-    appname: user-client
+    #appname: user-client
     
