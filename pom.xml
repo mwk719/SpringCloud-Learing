@@ -19,6 +19,7 @@
 		<module>microservice-provider-user-client</module>
 		<module>microservice-provider-user-client2</module>
 		<module>microservice-discovery-eureka</module>
+		<module>microservice-discovery-eureka-high</module>
 	</modules>
 
 	<properties>
