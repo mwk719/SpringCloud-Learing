@@ -19,6 +19,7 @@
 		<module>microservice-provider-user-client</module>
 		<module>microservice-provider-user-client2</module>
 		<module>microservice-discovery-eureka</module>
+		<module>microservice-gateway-zuul</module>
 		<module>microservice-discovery-eureka-high</module>
 		<module>microservice-consumer-movie-ribbon-list</module>
 		<module>microservice-consumer-movie-ribbon-hystrix</module>
